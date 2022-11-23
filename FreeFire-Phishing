@@ -219,6 +219,19 @@ url_shortner
 
 fi
 
+if [[ $option == *'n'* ]]; then
+clear
+echo""
+echo""
+
+fi
+if [[ $option == *'N'* ]]; then
+clear
+echo""
+echo""
+
+fi
+
 echo ""
 }
 
