@@ -25,6 +25,35 @@ server() {
 
 }
 
+
+
+function prt() {
+clear         
+printf "${red}[A]$cafe :${green} ngrok $cafe\e[0;33m[\e[0;31mGoogle Alert!\e[0;33m]
+${red}[B]$cafe :${green} cloudflare $cafe\e[0;33m[\e[0;32mNEW!\e[0;33m]
+${red}[D]$cafe :${green} localhost $cafe\e[0;33m[\e[0;34mFor Devs!\e[0;33m]
+\n\n"
+read -p $'\e[1;32m\e[94m Please enter your Option (A/B/D) : ' portfrd
+if [[ $portfrd == "A" || $portfrd == "a" || $portfrd == "cloudflare" ]]; then
+
+
+fi
+if [[ $portfrd == "B" || $portfrd == "b" || $portfrd == "ngrok" ]]; then
+
+
+fi
+if [[ $portfrd == "C" || $portfrd == "c" || $portfrd == "localhost" ]]; then
+
+
+fi
+if [[ $portfrd == "D" || $portfrd == "d" || $portfrd == "apache2" ]]; then
+
+
+fi
+}
+
+
+
 function url_checker() {
         if [ ! "${1//:*}" = http ]; then
 	        if [ ! "${1//:*}" = https ]; then
@@ -96,9 +125,9 @@ echo -e $" \e[91m[\e[0m-\e[91m]\e[1;92m Launching Cloudflared...\e[0m  "
 rm -rf cld.log
 			   echo -ne "  "
    		           if [[ `command -v termux-chroot` ]]; then
-			  sleep 2 && termux-chroot ./cloudflared-linux-arm64 tunnel -url 127.0.0.1:4444 --logfile cld.log > /dev/null 2>&1 &
+			  sleep 2 && termux-chroot cloudflared tunnel -url 127.0.0.1:4444 --logfile cld.log > /dev/null 2>&1 &
    			  else
-     		           sleep 2 && ./cloudflared-linux-arm64 tunnel -url 127.0.0.1:4444 --logfile cld.log > /dev/null 2>&1 &
+     		           sleep 2 && ./cloudflared tunnel -url 127.0.0.1:4444 --logfile cld.log > /dev/null 2>&1 &
    	                 fi
 			{ sleep 8; clear; }
 				clink=$(grep -o 'https://[-0-9a-z]*\.trycloudflare.com' "cld.log")
