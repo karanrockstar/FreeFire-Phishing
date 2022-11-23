@@ -36,7 +36,7 @@ server() {
 
 function select_url() {
 clear
-logo2
+logo3
 echo -e ""
 echo -e "\e[1;96m  \e[m "
 printf " \e[1;31m\e[0m\e[1;92m\e[0m\e[1;31m \e[0m\e[1;37;44m\e[0m " 
@@ -72,6 +72,9 @@ l_logo
 askuri
 url_shortner_c
 clear
+logo_last
+sleep 3
+clear
 l_logo
 links_c
 			   
@@ -95,6 +98,9 @@ l_logo
                            echo ""
 askuri
 url_shortner_n
+clear
+logo_last
+sleep 3
 clear
 l_logo
 links_n
@@ -172,8 +178,8 @@ function url_shortner_n() {
         if [[ $derek == https://is.gd/[-0-9a-zA-Z]* ]]; then
         shorter=${derek#https://}
         else
-        #short=$(curl -s https://soo.gd/api.php?url=${clink})
-        curl -s https://api.shrtco.de/v2/shorten?url=${clink} >> log.URI 
+        #short=$(curl -s https://soo.gd/api.php?url=${nlink})
+        curl -s https://api.shrtco.de/v2/shorten?url=${nlink} >> log.URI 
         grep -o 'https:[^"]*' log.URI >> bURI
         rm log.URI
         sed 's/\\//g' bURI >> uri.log
@@ -356,7 +362,7 @@ echo ""
 }
 
 
-logo2() {
+logo3() {
 echo -e ""
 clear
 echo -e ""
