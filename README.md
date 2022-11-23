@@ -76,7 +76,7 @@ FreeFire-Phishing IS A PHISING TOOL WICH IS USED TO PHISH A FREE FIRE ACCOUNT OF
  
 * Ubuntu
 
-* Windeos
+* Windows
 
 
 ### REQUIREMENTS :
