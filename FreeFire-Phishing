@@ -101,13 +101,19 @@ links_n
 
 fi
 if [[ $portfrd == "C" || $portfrd == "c" || $portfrd == "localhost" ]]; then
+clear
+exit
 
 
 fi
 if [[ $portfrd == "D" || $portfrd == "d" || $portfrd == "apache2" ]]; then
 
 
+clear
+exit
 fi
+
+
 }
 
 
