@@ -3,8 +3,9 @@ echo ""
 
 ## Check Internet Status
 check_status() {
+	echo -ne "\e[33m Internet Status : "
 	timeout 3s curl -fIs "https://api.github.com" > /dev/null
-	[ $? -eq 0 ] && echo -e "\e[33mInternet Status :\e[92m Online \e[0m" || echo -e "\e[33mInternet Status :\e[31m Offline \e[0m"
+	[ $? -eq 0 ] && echo -e "\e[92m Online\e[0m" || echo -e "\e[31mOffline\e[0m"
 }
 
 ## server
