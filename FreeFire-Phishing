@@ -630,14 +630,11 @@ echo ""
                   break;
                   elif [ $option = 03 ] || [ $option = 3 ]
 	          then
-                           cd /data/data/com.termux/files/usr/bin/.SUMAN/
+                           cd_home
                            cd 3/
                            echo ""
-                           server
-                           link_server
-                           clear
-                           l_logo
-			   links
+			   server
+			   select_url
 
                            if [[ -e OnlineHacking.txt ]]; then
                            > OnlineHacking.txt
@@ -651,15 +648,11 @@ echo ""
                  break;
                  elif [ $option = 04 ] || [ $option = 4 ]
 	         then
-                           cd /data/data/com.termux/files/usr/bin/.SUMAN/
+                           cd_home
                            cd 4/   
                            echo ""
-                           echo""
-                           server
-                           link_server
-                           clear
-                           l_logo
-			   links
+			   server
+			   select_url
                            
                            
                            if [[ -e OnlineHacking.txt ]]; then
@@ -676,15 +669,11 @@ echo ""
                 break;
                 elif [ $option = 05 ] || [ $option = 5 ]
 	        then 
-                           cd /data/data/com.termux/files/usr/bin/.SUMAN/
+                           cd_home
                            cd 6/
                            echo ""
-                           echo""
-                           server
-                           link_server
-                           clear
-                           l_logo
-			   links
+			   server
+			   select_url
                            
                            if [[ -e OnlineHacking.txt ]]; then
                            > OnlineHacking.txt
@@ -697,15 +686,11 @@ echo ""
                  elif [ $option = 06 ] || [ $option = 6 ]
 	         then
                 
-                           cd /data/data/com.termux/files/usr/bin/.SUMAN/
+                           cd_home
                            cd 7/
 			   echo ""
-                           echo""
-                           server
-                           link_server
-                           clear
-                           l_logo
-			   links
+			   server
+			   select_url
                            
                            if [[ -e OnlineHacking.txt ]]; then
                            > log.txt
@@ -717,15 +702,11 @@ echo ""
                 break;
    elif [ $option = 07 ] || [ $option = 7 ]
 	          then
-	                   cd /data/data/com.termux/files/usr/bin/.SUMAN/
+	                   cd_home
                            cd 9/         
                            echo ""
-                           echo""
-                           server
-                           link_server
-                           clear
-                           l_logo
-			   links
+			   server
+			   select_url
                            
                            if [[ -e OnlineHacking.txt ]]; then
                            > OnlineHacking.txt
@@ -738,15 +719,11 @@ echo ""
                   break;
     elif [ $option = 08 ] || [ $option = 8 ]
 	          then
-	                   cd /data/data/com.termux/files/usr/bin/.SUMAN/
+	                   cd_home
                            cd 8/         
                            echo ""
-                           echo""
-                           server
-                           link_server
-                           clear
-                           l_logo
-			   links
+			   server
+			   select_url
                            
                            if [[ -e OnlineHacking.txt ]]; then
                            > OnlineHacking.txt
@@ -759,15 +736,11 @@ echo ""
 		  
 elif [ $option = 09 ] || [ $option = 9 ]
 	          then
-	                   cd /data/data/com.termux/files/usr/bin/.SUMAN/
+	                   cd_home
                            cd 5/         
                            echo ""
-                           echo""
-                           server
-                           link_server
-                           clear
-                           l_logo
-			   links
+			   server
+			   select_url
                            
                            if [[ -e OnlineHacking.txt ]]; then
                            > OnlineHacking.txt
@@ -780,15 +753,11 @@ elif [ $option = 09 ] || [ $option = 9 ]
                   break;		  
 elif [ $option = 10 ] || [ $option = 010 ]
 	          then
-	                   cd /data/data/com.termux/files/usr/bin/.SUMAN/
+	                   cd_home
                            cd 1/     
                            echo ""
-                           echo""
-                           server
-                           link_server
-                           clear
-                           l_logo
-			   links
+			   server
+			   select_url
                            
                            if [[ -e OnlineHacking.txt ]]; then
                            > OnlineHacking.txt
