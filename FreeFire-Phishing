@@ -57,7 +57,7 @@ printf "\e[1;31m[\e[0m\e[1;92m05\e[0m\e[1;31m] \e[0m\e[1;48;5;21m Apache2 \e[0m 
 echo
 printf "\e[1;31m\e[0m\e[1;92m\e[0m\e[1;31m \e[0m\e[1;37;44m\e[0m"   
 echo
-printf "\e[1;31m[\e[0m\e[1;92m10\e[0m\e[1;31m] \e[0m\e[1;48;5;200m LocalHost\e[0m  \e[0;91m[\e[0;96mOnly This Devices!\e[0;91m]  ""
+printf "\e[1;31m[\e[0m\e[1;92m10\e[0m\e[1;31m] \e[0m\e[1;48;5;200m LocalHost\e[0m  \e[0;91m[\e[0;96mOnly This Devices!\e[0;91m]  "
 echo " "
 
 read -p $'\e[1;32m\e[95m Please enter your Option (\e[92mA/B/C\e[95m) : ' portfrd
