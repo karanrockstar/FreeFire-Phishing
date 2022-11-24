@@ -183,42 +183,40 @@ echo -e ""
 echo -e ""
 }
 
-# ASK FOR URL MODIFICATION
+
 function askuri_c() {
 echo ""
-read -p $'\e[1;40m\e[31m[\e[32m*\e[31m]\e[32m Do You Want To Modify This Url \e[1;91m (Y/N) : \e[0m' optionask
+read -p $"\e[1;40m\e[31m[\e[32m*\e[31m]\e[32m Do You Want To Modify This Url \e[1;91m (Y/N) : \e[0m" option
 echo""
 echo""
 echo""
 
-if [[ $optionask == *'Y'* ]]; then
+if [[ $option == *'Y'* ]]; then
 url_shortner_c
+
 fi
-if [[ $optionask == *'y'* ]]; then
+if [[ $option == *'y'* ]]; then
 url_shortner_c
+
 fi
-echo ""
 }
 
-# ASK FOR URL MODIFICATION
+
 function askuri_n() {
 echo ""
-read -p $'\e[1;40m\e[31m[\e[32m*\e[31m]\e[32m Do You Want To Modify This Url \e[1;91m (Y/N) : \e[0m' optionask
+read -p $"\e[1;40m\e[31m[\e[32m*\e[31m]\e[32m Do You Want To Modify This Url \e[1;91m (Y/N) : \e[0m" option
 echo""
 echo""
 echo""
 
-if [[ $optionask == *'Y'* ]]; then
+if [[ $option == *'Y'* ]]; then
 url_shortner_n
 
 fi
-if [[ $optionask == *'y'* ]]; then
+if [[ $option == *'y'* ]]; then
 url_shortner_n
 
 fi
-
-
-echo ""
 }
 
 
