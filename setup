@@ -179,38 +179,6 @@ echo -e ""
 echo -e ""
 }
 
-# ASK FOR URL MODIFICATION
-function askuri_c() {
-echo ""
-read -p $'\e[1;40m\e[31m[\e[32m*\e[31m]\e[32m Do You Want To Modify This Url \e[1;91m (Y/N) : \e[0m' option
-echo""
-echo""
-echo""
-
-if [[ $option == *'Y'* ]]; then
-url_shortner_c
-
-fi
-if [[ $option == *'y'* ]]; then
-url_shortner_c
-
-fi
-
-if [[ $option == *'n'* ]]; then
-clear
-echo""
-echo""
-
-fi
-if [[ $option == *'N'* ]]; then
-clear
-echo""
-echo""
-
-fi
-
-echo ""
-}
 
 # ASK FOR URL MODIFICATION
 function askuri_n() {
