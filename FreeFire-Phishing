@@ -130,7 +130,17 @@ if [[ $portfrd == "E" || $portfrd == "e" || $portfrd == "localhost" ]]; then
 echo ""
 clear
 l_logo
-                          
+                           echo -e "\e[96m=======================\e[92m   SUMAN © 2022 FF  \e[96m=======================\e[92m"
+                           echo -e " "
+			   echo -e " "
+                           echo -e $'\e[1;33m\e[0m\e[1;77m\e[0m\e[1;33m\e[0m\e[1;96m ------------------------- > > > > > >\e[0m'
+                           printf "\e[1;33m\e[0m\e[1;33mLocalHost Link :\e[0m\e[1;77m http://127.0.0.1:4444/   \e[0m    "                        
+                           echo -e $'\e[1;33m\e[0m\e[1;77m\e[0m\e[1;33m\e[0m\e[1;96m ------------------------- > > > > > > >\e[0m'
+			   echo ""
+			   echo -e "\e[96m=======================\e[92m VICTIM INFORMATION \e[96m======================= \e[93m" 
+                           echo ""
+			   echo -e " \e[91m[\e[92m*\e[91m]\e[1;93m \e[0m\e[1;95m Waiting For Login Info, \e[92mCtrl + C \e[1;95mto Exit... \e[93m"
+			   echo ""                
 			   
 fi
 }
