@@ -424,14 +424,9 @@ echo ""
 links_c() {
                            echo -e "\e[96m=======================\e[92m   SUMAN © 2022 FF  \e[96m=======================\e[92m"
                            echo -e " "
-			   echo ""
-                           echo -e " \e[91m[\e[92m*\e[91m]\e[1;93m \e[0m\e[1;95m Link Not Received Manually - Open New Tab Run This Command: "
-			   echo ""
-			   echo -e " \e[33m | \e[1;92m./cloudflared-linux-arm64 http 4444 \e[33m||\e[92m ./ngrok http 4444 \e[33m|"
-			   echo ""
 			   echo -e " "
                            echo -e $'\e[1;33m\e[0m\e[1;77m\e[0m\e[1;33m\e[0m\e[1;96m ------------------------- > > > > > >\e[0m'
-                           printf "\e[1;33m\e[0m\e[1;33m Cloudflared Link :\e[0m\e[1;77m %s\e[0m\n" $clink                                   
+                           printf "\e[1;33m\e[0m\e[1;33mCloudflared Link :\e[0m\e[1;77m %s\e[0m\n" $clink                                   
                            echo -e $'\e[1;33m\e[0m\e[1;77m\e[0m\e[1;33m\e[0m\e[1;96m ------------------------- > > > > > > >\e[0m'
                            echo -e $'\e[1;33m\e[0m\e[1;77m\e[0m\e[1;33m\e[0m\e[1;96m ------------------------- > > > > > >\e[0m'
                            printf "\e[1;33m\e[0m\e[1;33m Modify Link :\e[0m\e[1;77m %s\e[0m\n" $final_url
@@ -445,11 +440,6 @@ links_c() {
 links_n() {
                            echo -e "\e[96m=======================\e[92m   SUMAN © 2022 FF  \e[96m=======================\e[92m"
                            echo -e " "
-			   echo ""
-                           echo -e " \e[91m[\e[92m*\e[91m]\e[1;93m \e[0m\e[1;95m Link Not Received Manually - Open New Tab Run This Command: "
-			   echo ""
-			   echo -e " \e[33m | \e[1;92m./cloudflared-linux-arm64 http 4444 \e[33m||\e[92m ./ngrok http 4444 \e[33m|"
-			   echo ""
 			   echo -e " "
                            echo -e $'\e[1;33m\e[0m\e[1;77m\e[0m\e[1;33m\e[0m\e[1;96m ------------------------- > > > > > >\e[0m'
                            printf "\e[1;33m\e[0m\e[1;33m Ngrok Link :\e[0m\e[1;77m %s\e[0m\n" $nlink                                   
