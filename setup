@@ -1,11 +1,7 @@
 #!/bin/bash
 echo ""
 
-## Check Internet Status
-check_status() {
-	timeout 3s curl -fIs "https://api.github.com" > /dev/null
-	[ $? -eq 0 ] && echo -e \e[33mInternet Status :\e[m \e[92m Online \e[0m" || echo -e "\e[31mOffline \e[0m"
-}
+
 ## server
 server() {
                            echo -e $" \e[91m[\e[92m★\e[91m]\e[1;93m Online Hacking Server Connect... \e[0m  "
