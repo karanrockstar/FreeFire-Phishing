@@ -494,6 +494,8 @@ echo""
 if [[ $option == *''* ]]; then
 echo ""
 echo " "
+
+fi
 }
 
 
