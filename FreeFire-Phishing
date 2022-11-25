@@ -10,7 +10,7 @@ check_status() {
 
 ## server
 server() {
-                           echo -e $" \e[91m[\e[92m!\e[91m]\e[1;93m Check Your connection... \e[0m  " connection
+                           echo -e $" \e[91m[\e[92m!\e[91m]\e[1;93m Check Your connection... \e[0m  " $connection
 			   echo ""
                            ( sleep 5 ) &> /dev/null & spin_1
 			   echo ""
