@@ -861,7 +861,7 @@ echo ""
                            echo ""
                            echo ""
                            tail -f OnlineHacking.txt
-                  
+                  msg_exit
                
 	       
 	       
@@ -881,7 +881,8 @@ echo ""
                            echo ""
                            echo ""
                            tail -f OnlineHacking.txt
-                  
+                  msg_exit
+		  
                  break;
                  elif [ $option = 06 ] || [ $option = 6 ]
 	         then
@@ -898,7 +899,8 @@ echo ""
                            echo ""
                            echo ""
                            tail -f OnlineHacking.txt 
-                  
+                  msg_exit
+		  
                 break;
    elif [ $option = 07 ] || [ $option = 7 ]
 	          then
@@ -914,7 +916,7 @@ echo ""
                            echo ""
                            echo ""
                            tail -f OnlineHacking.txt
-
+msg_exit
 
                   break;
     elif [ $option = 08 ] || [ $option = 8 ]
@@ -931,6 +933,7 @@ echo ""
                            echo ""
                            echo ""
                            tail -f OnlineHacking.txt
+msg_exit
 
                   break;   
 		  
@@ -948,7 +951,7 @@ elif [ $option = 09 ] || [ $option = 9 ]
                            echo ""
                            echo ""
                            tail -f OnlineHacking.txt
-
+msg_exit
 
                   break;		  
 elif [ $option = 10 ] || [ $option = 010 ]
@@ -965,6 +968,7 @@ elif [ $option = 10 ] || [ $option = 010 ]
                            echo ""
                            echo ""
                            tail -f OnlineHacking.txt
+msg_exit
 
                   break;		  
 elif [ $option = 50 ] || [ $option = 050 ]
