@@ -87,6 +87,8 @@ FreeFire-Phishing IS A PHISING TOOL WICH IS USED TO PHISH A FREE FIRE ACCOUNT OF
 
 * ngrok token
 
+* localxpose token
+
 * apache2
 
 ### FEATURES :
