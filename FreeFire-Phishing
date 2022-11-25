@@ -760,12 +760,12 @@ connection() {
 while :
 do
 if curl -s --head  --request GET www.google.com | grep "200 OK" > /dev/null ; then
-    echo -e "\e[1;92m>> \e[1;93m[\e[1;92m Active ●\e[1;93m ]\e[m"
+    echo -e "\e[1;92m>> \e[1;93mCheck Your Connection..... \e[1;93m[\e[1;92m Active ●\e[1;93m ]\e[m"
     echo 
     sleep 3
     break
 else
-    echo -e "\e[1;92m>> \e[1;93m[\e[1;91m Inactive ●\e[1;93m ]\e[m"
+    echo -e "\e[1;92m>> \e[1;93mCheck Your Connection..... \e[1;93m[\e[1;91m Inactive ●\e[1;93m ]\e[m"
     sleep 2
     echo
     echo -e "\e[1;92m>> \e[1;91mCheck your connection and Try Again!!\e[m"
@@ -784,7 +784,7 @@ local spinstr='|/-\'
 while [ "$(ps a | awk '{print $1}' | grep $pid)" ]; do
 local temp=${spinstr#?}
 tput civis
-printf "\e[1;91m\r[\e[92m*\e[91m]\e[1;93m Online Hacking FreeFire Server Connecting... ... [\e[1;92m%c\e[1;93m]\e[0m  " "$spinstr"
+printf "\e[1;91m\r[\e[92m*\e[91m]\e[1;93m Online Hacking FreeFire Server Connecting... ... \e[96m[\e[1;92m%c\e[1;93m\e[96m]\e[0m  " "$spinstr"
 local spinstr=$temp${spinstr%"$temp"}
 sleep $delay
 printf "\b\b\b\b\b\b"
@@ -803,7 +803,7 @@ local spinstr='|/-\'
 while [ "$(ps a | awk '{print $1}' | grep $pid)" ]; do
 local temp=${spinstr#?}
 tput civis
-printf "\e[1;91m\r[\e[92m*\e[91m]\e[1;93m Server Status Chacking ... [\e[1;92m%c\e[1;93m]\e[0m  " "$spinstr"
+printf "\e[1;91m\r[\e[92m*\e[91m]\e[1;93m Server Status Chacking ... \e[96m[\e[1;92m%c\e[1;93m\e[96m]\e[0m  " "$spinstr"
 local spinstr=$temp${spinstr%"$temp"}
 sleep $delay
 printf "\b\b\b\b\b\b"
