@@ -221,7 +221,7 @@ echo -e ""
 }
 
 function url_shortner_n() {
-        rm -rf uri.log log.URI 
+        rm -rf uri.log 
 	#short=$(curl -s http://tny.im/yourls-api.php?action=shorturl\&format=simple\&url=${ngrok_url})
 	#short=$(curl -s https://vurl.com/api.php?url=${ngrok_url})
 	#derek=$(curl -s https://is.gd/create.php\?format\=simple\&url=${link})
