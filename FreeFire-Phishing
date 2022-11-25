@@ -404,9 +404,8 @@ start_ngrok() {
 	{ sleep 1; }
 	echo -e $" \e[91m[\e[0m-\e[91m]\e[1;92m Launching Ngrok...\e[0m  "
 	echo -e "\n"
-	read -n1 -p "${RED}[${WHITE}-${RED}]${ORANGE} Change Ngrok Server Region? Typr Y ${GREEN}[${CYAN}y${GREEN}/${CYAN}N${GREEN}]:${ORANGE} " opinion
-	[[ ${opinion,,} == "y" ]] && ngrok_region="in" || ngrok_region="us" || ngrok_region="eu" || ngrok_region="jp"
-	echo -e "\n\n${RED}[${WHITE}-${RED}]${GREEN} Launching Ngrok..."
+	read -n1 -p $'\e[91m[\e[92m*\e[91m]\e[95m Change Loclx Server Region? \e[92m(y/N) \e[0m ' opinion
+	[[ ${opinion,,} == "y" ]] && ngrok_region="eu" || ngrok_region="us" || ngrok_region="eu" || ngrok_region="jp"
 
 	if [[ `command -v termux-chroot` ]]; then
 		sleep 2 && termux-chroot ./ngrok http --region ${ngrok_region} "127.0.0.1":"4444" > /dev/null 2>&1 &
