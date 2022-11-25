@@ -40,28 +40,30 @@ logo3
 echo -e "\e[1;96m  \e[m "
 printf " \e[1;31m\e[0m\e[1;92m\e[0m\e[1;31m \e[0m\e[1;37;44m\e[0m " 
 echo " "
-printf "\e[1;31m[\e[0m\e[1;93mA\e[0m\e[1;31m] \e[0m\e[1;37;44m Cloudflare \e[0m   \e[0;91m[\e[0;96mAuto Detects\e[0;91m] "
+printf "\e[1;31m[\e[0m\e[1;92mA\e[0m\e[1;31m] \e[0m\e[1;37;44m Cloudflare \e[0m   \e[0;91m[\e[0;96mAuto Detects\e[0;91m] "
 echo
 printf "\e[1;31m\e[0m\e[1;92m\e[0m\e[1;31m \e[0m\e[1;37;44m\e[0m"     
 echo
-printf "\e[1;31m[\e[0m\e[1;93mB\e[0m\e[1;31m] \e[0m\e[1;37;41m Ngrok \e[0m        \e[0;91m[\e[0;96mAccount Token Needed\e[0;91m]   "
+printf "\e[1;31m[\e[0m\e[1;92mB\e[0m\e[1;31m] \e[0m\e[1;37;41m Ngrok \e[0m        \e[0;91m[\e[0;96mAccount Token Needed\e[0;91m]   "
 echo
 printf "\e[1;31m\e[0m\e[1;92m\e[0m\e[1;31m \e[0m\e[1;37;44m\e[0m"
 echo
-printf "\e[1;31m[\e[0m\e[1;93mC\e[0m\e[1;31m] \e[0m\e[1;91;107m LocalXpose \e[0m  \e[0;91m[\e[0;96mNEW! Max 15Min\e[0;91m]  "
+printf "\e[1;31m[\e[0m\e[1;92mC\e[0m\e[1;31m] \e[0m\e[1;91;107m LocalXpose \e[0m   \e[0;91m[\e[0;95mNEW! \e[96mMax 15Min\e[0;91m]  "
 echo
 printf "\e[1;31m\e[0m\e[1;92m\e[0m\e[1;31m \e[0m\e[1;37;44m\e[0m"
 echo
-printf "\e[1;31m[\e[0m\e[1;92mD\e[0m\e[1;31m] \e[0m\e[1;48;5;21m Apache2 \e[0m    \e[0;91m[\e[0;96m Coming soon\e[0;91m] "
+printf "\e[1;31m[\e[0m\e[1;92mD\e[0m\e[1;31m] \e[0m\e[1;48;5;21m Apache2 \e[0m      \e[0;91m[\e[0;96mComing soon\e[0;91m] "
 echo
 printf "\e[1;31m\e[0m\e[1;92m\e[0m\e[1;31m \e[0m\e[1;37;44m\e[0m"   
 echo
-printf "\e[1;31m[\e[0m\e[1;92mE\e[0m\e[1;31m] \e[0m\e[1;48;5;200m LocalHost\e[0m  \e[0;91m[\e[0;96mOnly This Devices!\e[0;91m]  "
+printf "\e[1;31m[\e[0m\e[1;92mE\e[0m\e[1;31m] \e[0m\e[1;48;5;200m LocalHost\e[0m     \e[0;91m[\e[0;96mOnly This Devices!\e[0;91m]  "
+echo
+printf "\e[1;31m\e[0m\e[1;92m\e[0m\e[1;31m \e[0m\e[1;37;44m\e[0m"   
 echo
 printf "\e[1;31m\e[0m\e[1;92m\e[0m\e[1;31m \e[0m\e[1;37;44m\e[0m"   
 echo " "
 
-read -p $'\e[1;32m\e[95m Please enter your Option (\e[92mA/B/C\e[95m) : ' portfrd
+read -p $'\e[1;32m\e[93m Please enter your Option (\e[95mA/B/C\e[93m) : \e[97m ' portfrd
 if [[ $portfrd == "A" || $portfrd == "a" || $portfrd == "cloudflare" ]]; then
 echo ""
 start_cloudflared
