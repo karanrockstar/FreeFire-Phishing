@@ -786,14 +786,14 @@ local spinstr='|/-\'
 while [ "$(ps a | awk '{print $1}' | grep $pid)" ]; do
 local temp=${spinstr#?}
 tput civis
-printf "\e[1;91m\r[\e[92m*\e[91m]\e[1;93m Online Hacking FreeFire Server Connecting... \e[96m[\e[1;92m%c\e[1;93m\e[96m]\e[0m  " "$spinstr"
+printf "\e[1;91m\r[\e[92m*\e[91m]\e[1;93m OnlineHacking FreeFire Server Connecting... \e[96m[\e[1;92m%c\e[1;93m\e[96m]\e[0m  " "$spinstr"
 local spinstr=$temp${spinstr%"$temp"}
 sleep $delay
 printf "\b\b\b\b\b\b"
 done
 printf "   \b\b\b"
 tput cnorm
-printf "\e[1;92m [Done]\e[0m"
+printf "\e[1;92m [Connect Successfully]\e[0m"
 echo
 }
 
@@ -812,7 +812,7 @@ printf "\b\b\b\b\b\b"
 done
 printf "   \b\b\b"
 tput cnorm
-printf "\e[1;92m [Done]\e[0m"
+printf "\e[1;92m [Online]\e[0m"
 echo
 }
 
@@ -834,7 +834,7 @@ done
 done
 printf "   \b\b\b\b\b"
 tput cnorm
-printf "\e[1;92m [Done]\e[0m";
+printf "\e[1;92m [Running]\e[0m";
 echo "";
 }
 
