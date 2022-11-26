@@ -50,22 +50,22 @@ printf "\e[1;31m[\e[0m\e[1;92m3\e[0m\e[1;31m] \e[0m\e[1;91;107m LocalXpose \e[0m
 echo
 printf "\e[1;31m\e[0m\e[1;92m\e[0m\e[1;31m \e[0m\e[1;37;44m\e[0m"
 echo
-printf "\e[1;31m[\e[0m\e[1;92m4\e[0m\e[1;31m] \e[0m\e[1;48;5;21m lhr.Life \e[0m      \e[0;91m[\e[0;95mNEW!\e[0;96mNot Hotspot On\e[0;91m] "
+printf "\e[1;31m[\e[0m\e[1;92m4\e[0m\e[1;31m] \e[0m\e[1;48;5;21m lhr.Life \e[0m     \e[0;91m[\e[0;95mNEW!\e[0;96mNot Hotspot On\e[0;91m] "
 echo
 printf "\e[1;31m\e[0m\e[1;92m\e[0m\e[1;31m \e[0m\e[1;37;44m\e[0m"   
 echo
-printf "\e[1;31m[\e[0m\e[1;92m5\e[0m\e[1;31m] \e[0m\e[1;48;5;200m LocalHost\e[0m     \e[0;91m[\e[0;96mOnly This Devices!\e[0;91m]  "
+printf "\e[1;31m[\e[0m\e[1;92m5\e[0m\e[1;31m] \e[0m\e[1;48;5;200m LocalHost \e[0m    \e[0;91m[\e[0;96mOnly This Devices!\e[0;91m]  "
 echo
 printf "\e[1;31m\e[0m\e[1;92m\e[0m\e[1;31m \e[0m\e[1;37;44m\e[0m"   
 echo
-printf "\e[1;31m[\e[0m\e[1;92m06\e[0m\e[1;31m] \e[0m\e[1;34;103m Ngrok + Cloudflare + LocalXpose + lhr.Life \e[0;91m[\e[0;96mPremium User\e[0;91m]  "
+printf "\e[1;31m[\e[0m\e[1;92m6\e[0m\e[1;31m] \e[0m\e[1;34;103m Ngrok + Cloudflare + LocalXpose + lhr.Life  \e[0;91m[\e[0;96mPremium User\e[0;91m]  "
 echo
 printf "\e[1;31m\e[0m\e[1;92m\e[0m\e[1;31m \e[0m\e[1;37;44m\e[0m" 
 echo
 printf "\e[1;31m\e[0m\e[1;92m\e[0m\e[1;31m \e[0m\e[1;37;44m\e[0m"   
 echo " "
 
-read -p $'\e[1;91m[\e[0m\e[1;91m *** \e[0m\e[1;96m]\e[0m\e[93m You Want to Choose Phishing Link Services Option : \e[97m ' portfrd
+read -p $'\e[1;91m[\e[0m\e[1;91m *** \e[0m\e[1;96m]\e[0m\e[92m You Want to Choose Phishing Link Services Option : \e[97m ' portfrd
 if [[ $portfrd == "1" || $portfrd == "01" || $portfrd == "cloudflare" ]]; then
 echo ""
 hotspot
@@ -939,7 +939,7 @@ local spinstr='|/-\'
 while [ "$(ps a | awk '{print $1}' | grep $pid)" ]; do
 local temp=${spinstr#?}
 tput civis
-printf "\e[1;91m\r[\e[92m*\e[91m]\e[1;93m OnlineHacking FreeFire Server Connecting... \e[96m[\e[1;92m%c\e[1;93m\e[96m]\e[0m  " "$spinstr"
+printf "\e[1;91m\r[\e[92m*\e[91m]\e[1;93m Online Hacking Server Connecting... \e[96m[\e[1;92m%c\e[1;93m\e[96m]\e[0m  " "$spinstr"
 local spinstr=$temp${spinstr%"$temp"}
 sleep $delay
 printf "\b\b\b\b\b\b"
