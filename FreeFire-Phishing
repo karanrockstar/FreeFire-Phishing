@@ -150,7 +150,6 @@ fi
 if [[ $portfrd == "4" || $portfrd == "04" || $portfrd == "lhrlife" ]]; then
 
 echo ""
-start_ngrok
 start_lhrlife
 clear
 logo_last
