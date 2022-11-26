@@ -149,6 +149,7 @@ fi
 if [[ $portfrd == "4" || $portfrd == "04" || $portfrd == "lhrlife" ]]; then
 
 echo ""
+start_ngrok
 start_lhrlife
 clear
 logo_last
@@ -193,6 +194,10 @@ fi
 if [[ $portfrd == "6" || $portfrd == "06" || $portfrd == "suman" ]]; then
 echo ""
 hotspot
+start_cloudflared
+start_ngrok
+start_loclx
+start_lhrlife
 clear
 l_logo
 all_links
