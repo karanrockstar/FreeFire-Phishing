@@ -50,7 +50,7 @@ printf "\e[1;31m[\e[0m\e[1;92m3\e[0m\e[1;31m] \e[0m\e[1;91;107m LocalXpose \e[0m
 echo
 printf "\e[1;31m\e[0m\e[1;92m\e[0m\e[1;31m \e[0m\e[1;37;44m\e[0m"
 echo
-printf "\e[1;31m[\e[0m\e[1;92m4\e[0m\e[1;31m] \e[0m\e[1;48;5;21m lhr.Life \e[0m     \e[0;91m[\e[0;95mNEW!\e[0;96mNot Hotspot On\e[0;91m] "
+printf "\e[1;31m[\e[0m\e[1;92m4\e[0m\e[1;31m] \e[0m\e[1;48;5;21m lhr.Life \e[0m     \e[0;91m[\e[0;95mNEW!\e[0;96m Not Hotspot On\e[0;91m] "
 echo
 printf "\e[1;31m\e[0m\e[1;92m\e[0m\e[1;31m \e[0m\e[1;37;44m\e[0m"   
 echo
@@ -58,7 +58,7 @@ printf "\e[1;31m[\e[0m\e[1;92m5\e[0m\e[1;31m] \e[0m\e[1;48;5;200m LocalHost \e[0
 echo
 printf "\e[1;31m\e[0m\e[1;92m\e[0m\e[1;31m \e[0m\e[1;37;44m\e[0m"   
 echo
-printf "\e[1;31m[\e[0m\e[1;92m6\e[0m\e[1;31m] \e[0m\e[1;34;103m Ngrok + Cloudflare + LocalXpose + lhr.Life  \e[0;91m[\e[0;96mPremium User\e[0;91m]  "
+printf "\e[1;31m[\e[0m\e[1;92m6\e[0m\e[1;31m] \e[0m\e[1;34;103m Ngrok + Cloudflare + LocalXpose + lhr.Life \e[0m \e[0;91m[\e[0;96mPremium User\e[0;91m]  "
 echo
 printf "\e[1;31m\e[0m\e[1;92m\e[0m\e[1;31m \e[0m\e[1;37;44m\e[0m" 
 echo
@@ -875,12 +875,12 @@ connection() {
 while :
 do
 if curl -s --head  --request GET www.google.com | grep "200 OK" > /dev/null ; then
-    echo -e "\e[1;92m>> \e[1;93mCheck Your Connection..... \e[1;93m[\e[1;92m Active ●\e[1;93m ]\e[m"
+    echo -e "\e[1;92m>> \e[1;93mCheck Your Connection..... \e[1;96m[\e[1;92m Active ●\e[1;96m ]\e[m"
     echo 
     sleep 3
     break
 else
-    echo -e "\e[1;92m >> \e[1;93mCheck Your Connection..... \e[1;93m[\e[1;91m Inactive ●\e[1;93m ]\e[m"
+    echo -e "\e[1;92m >> \e[1;93mCheck Your Connection..... \e[1;96m[\e[1;91m Inactive ●\e[1;96m ]\e[m"
     sleep 2
     echo
     echo -e "\e[1;92m>> \e[1;91mCheck your connection and Try Again!!\e[m"
@@ -906,7 +906,7 @@ printf "\b\b\b\b\b\b"
 done
 printf "   \b\b\b"
 tput cnorm
-printf "\e[1;96m [\e[1;92mConnect Successfully\e[1;92m]\e[0m"
+printf "\e[1;96m [\e[1;92m Connect Successfully \e[1;96m]\e[0m"
 echo
 }
 
@@ -925,7 +925,7 @@ printf "\b\b\b\b\b\b"
 done
 printf "   \b\b\b"
 tput cnorm
-printf "\e[1;96m [\e[1;92mOnline\e[1;96m]\e[0m"
+printf "\e[1;96m [\e[1;92m Online ● \e[1;96m]\e[0m"
 echo
 }
 
@@ -947,7 +947,7 @@ done
 done
 printf "   \b\b\b\b\b"
 tput cnorm
-printf "\e[1;95m [\e[1;92mRunning\e[1;95m]\e[0m";
+printf "\e[1;95m [\e[1;92m Running \e[1;95m]\e[0m";
 echo "";
 }
 
@@ -969,7 +969,7 @@ done
 done
 printf "   \b\b\b\b\b"
 tput cnorm
-printf "\e[1;92m [Done]\e[0m";
+printf "\e[1;96m [\e[1;92m Done \e[1;96m]\e[0m";
 echo "";
 }
 
@@ -991,7 +991,7 @@ done
 done
 printf "   \b\b\b\b\b"
 tput cnorm
-printf "\e[1;92m [Done]\e[0m";
+printf "\e[1;92m [ Done ]\e[0m";
 echo "";
 }
 
