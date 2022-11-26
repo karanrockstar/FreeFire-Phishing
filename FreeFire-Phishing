@@ -10,6 +10,11 @@ check_status() {
 
 ## server
 server() {
+clear
+logo1
+echo " "
+echo -e "\e[1;96m< < < ====================================================== > > >\e[m "
+echo ""
                            echo ""
 			   ( sleep 2 ) &> /dev/null & connection
                            echo ""
