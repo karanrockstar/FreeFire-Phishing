@@ -372,22 +372,12 @@ echo""
 echo""
 echo""
 
-if [[ $option == *'Y'* ]]; then
-url_shortner_c
-
-fi
-if [[ $option == *'y'* ]]; then
+if [[ $option == "Y" || $option == "y" || $option == "yes" ]]; then
 url_shortner_c
 
 fi
 
-if [[ $option == *'n'* ]]; then
-clear
-echo""
-echo""
-
-fi
-if [[ $option == *'N'* ]]; then
+if [[ $option == "N" || $option == "n" || $option == "no" ]]; then
 clear
 echo""
 echo""
@@ -405,22 +395,12 @@ echo""
 echo""
 echo""
 
-if [[ $option == *'Y'* ]]; then
-url_shortner_ng
-
-fi
-if [[ $option == *'y'* ]]; then
+if [[ $option == "Y" || $option == "y" || $option == "yes" ]]; then
 url_shortner_ng
 
 fi
 
-if [[ $option == *'n'* ]]; then
-clear
-echo""
-echo""
-
-fi
-if [[ $option == *'N'* ]]; then
+if [[ $option == "N" || $option == "n" || $option == "no" ]]; then
 clear
 echo""
 echo""
@@ -438,22 +418,12 @@ echo""
 echo""
 echo""
 
-if [[ $option == *'Y'* ]]; then
-url_shortner_l
-
-fi
-if [[ $option == *'y'* ]]; then
+if [[ $option == "Y" || $option == "y" || $option == "yes" ]]; then
 url_shortner_l
 
 fi
 
-if [[ $option == *'n'* ]]; then
-clear
-echo""
-echo""
-
-fi
-if [[ $option == *'N'* ]]; then
+if [[ $option == "N" || $option == "n" || $option == "no" ]]; then
 clear
 echo""
 echo""
@@ -470,22 +440,12 @@ echo""
 echo""
 echo""
 
-if [[ $option == *'Y'* ]]; then
-url_shortner_lhrlife
-
-fi
-if [[ $option == *'y'* ]]; then
+if [[ $option == "Y" || $option == "y" || $option == "yes" ]]; then
 url_shortner_lhrlife
 
 fi
 
-if [[ $option == *'n'* ]]; then
-clear
-echo""
-echo""
-
-fi
-if [[ $option == *'N'* ]]; then
+if [[ $option == "N" || $option == "n" || $option == "no" ]]; then
 clear
 echo""
 echo""
@@ -1058,6 +1018,7 @@ printf "\e[100;330m[\e[10m **** ]\e[1;40m\e[10m OnlineHacking :\e[1;32m Join Tel
 echo ""
 echo ""
 sleep 3
+echo ""
 check_status
 check_update
 sleep 2
