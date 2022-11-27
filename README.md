@@ -1,12 +1,8 @@
 
-# Using Tutorial : https://www.onlinehacking.in/free-fire-account-hack-phishing-tool-with-termux
-
-
+### Using Tutorial : https://www.onlinehacking.in/free-fire-account-hack-phishing-tool-with-termux
 
   <p>&nbsp;</p><p><br /></p><p><br /></p><p><br /></p>
   <p>&nbsp;</p><p><br /></p><p><br /></p>
-
-
   
   
 <h1 align="center">Free Fire Phishing - OnlineHacking</h1>
