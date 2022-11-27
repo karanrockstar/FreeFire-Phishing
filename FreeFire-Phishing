@@ -481,8 +481,8 @@ start_ngrok() {
 	{ sleep 1; }
 	echo -e $" \e[91m[\e[0m-\e[91m]\e[1;92m Launching Ngrok...\e[0m  "
 	echo -e "\n"
-	read -n1 -p $'\e[91m[\e[92m*\e[91m]\e[95m Change Loclx Server Region? \e[92m(y/N) \e[0m ' opinion
-	[[ ${opinion,,} == "y" ]] && loclx_region="eu" || loclx_region="us"
+	read -n1 -p $'\e[91m[\e[92m*\e[91m]\e[95m Change Ngrok Server Region? \e[92m(y/N) \e[0m ' opinion
+	[[ ${opinion,,} == "y" ]] && ngrok_region="eu" || ngrok_region="us"
 	echo -e ""
 
 	if [[ `command -v termux-chroot` ]]; then
@@ -925,14 +925,14 @@ local delay=0.05
 local spinstr='|/-\'
 while [ "$(ps a | awk '{print $1}' | grep $pid)" ]; do
 local temp=${spinstr#?}
-tput civis
+civis
 printf "\e[1;91m\r[\e[92m*\e[91m]\e[1;93m Server Status Chacking ... \e[96m[\e[1;92m%c\e[1;93m\e[96m]\e[0m  " "$spinstr"
 local spinstr=$temp${spinstr%"$temp"}
 sleep $delay
 printf "\b\b\b\b\b\b"
 done
 printf "   \b\b\b"
-tput cnorm
+cnorm
 printf "\e[1;96m [\e[1;92m Online ● \e[1;96m]\e[0m"
 echo
 }
@@ -947,14 +947,14 @@ while [ "$(ps a | awk '{print $1}' | grep $pid)" ]; do
 
 for i in "${spinner[@]}"
 do
-	tput civis
+	civis
 	echo -ne "\033[1;91m\r[\e[1;92m*\e[1;91m]\e[1;96m PHP Server Now Startng ... \e[1;93m[\033[1;92m$i\033[1;93m]\033[0m   ";
 	sleep $delay
 	printf "\b\b\b\b\b\b\b\b";
 done
 done
 printf "   \b\b\b\b\b"
-tput cnorm
+cnorm
 printf "\e[1;95m [\e[1;92m Running \e[1;95m]\e[0m";
 echo "";
 }
@@ -969,14 +969,14 @@ while [ "$(ps a | awk '{print $1}' | grep $pid)" ]; do
 
 for i in "${spinner[@]}"
 do
-	tput civis
+	civis
 	echo -ne "\033[1;91m\r[\e[1;92m-\e[1;91m]\e[1;95m Start LocalHost...   \e[97m http://127.0.0.1:4444 \e[1;93m[\033[1;92m$i\033[1;93m]\033[0m   ";
 	sleep $delay
 	printf "\b\b\b\b\b\b\b\b";
 done
 done
 printf "   \b\b\b\b\b"
-tput cnorm
+cnorm
 printf "\e[1;96m [\e[1;92m Done \e[1;96m]\e[0m";
 echo "";
 }
@@ -991,14 +991,14 @@ while [ "$(ps a | awk '{print $1}' | grep $pid)" ]; do
 
 for i in "${spinner[@]}"
 do
-	tput civis
+	civis
 	echo -ne "\033[1;91m\r[\e[1;95m-\e[1;91m]\e[1;92m Launching Link Service ... \e[1;93m[\033[1;92m$i\033[1;93m]\033[0m   ";
 	sleep $delay
 	printf "\b\b\b\b\b\b\b\b";
 done
 done
 printf "   \b\b\b\b\b"
-tput cnorm
+cnorm
 printf "\e[1;92m [ Done ]\e[0m";
 echo "";
 }
