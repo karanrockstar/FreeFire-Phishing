@@ -22,6 +22,7 @@ echo ""
 			   echo ""
 			   (sleep 4) &> /dev/null & spin_2
 			   echo ""
+			   tput civis
 			   ( sleep 8 ) &> /dev/null & spinner_1
                            echo ""
 			   php -S 127.0.0.1:4444 > /dev/null 2>&1 &
@@ -901,12 +902,14 @@ local delay=0.05
 local spinstr='|/-\'
 while [ "$(ps a | awk '{print $1}' | grep $pid)" ]; do
 local temp=${spinstr#?}
+tput civis
 printf "\e[1;91m\r[\e[92m*\e[91m]\e[1;93m Online Hacking Server Connecting... \e[96m[\e[1;92m%c\e[1;93m\e[96m]\e[0m  " "$spinstr"
 local spinstr=$temp${spinstr%"$temp"}
 sleep $delay
 printf "\b\b\b\b\b\b"
 done
 printf "   \b\b\b"
+tput cnorm
 printf "\e[1;96m [\e[1;92m Connect Successfully \e[1;96m]\e[0m"
 echo
 }
@@ -918,12 +921,14 @@ local delay=0.05
 local spinstr='|/-\'
 while [ "$(ps a | awk '{print $1}' | grep $pid)" ]; do
 local temp=${spinstr#?}
+tput civis
 printf "\e[1;91m\r[\e[92m*\e[91m]\e[1;93m Server Status Chacking ... \e[96m[\e[1;92m%c\e[1;93m\e[96m]\e[0m  " "$spinstr"
 local spinstr=$temp${spinstr%"$temp"}
 sleep $delay
 printf "\b\b\b\b\b\b"
 done
 printf "   \b\b\b"
+tput cnorm
 printf "\e[1;96m [\e[1;92m Online ● \e[1;96m]\e[0m"
 echo
 }
@@ -938,14 +943,14 @@ while [ "$(ps a | awk '{print $1}' | grep $pid)" ]; do
 
 for i in "${spinner[@]}"
 do
-	
+	tput civis
 	echo -ne "\033[1;91m\r[\e[1;92m*\e[1;91m]\e[1;96m PHP Server Now Startng ... \e[1;93m[\033[1;92m$i\033[1;93m]\033[0m   ";
 	sleep $delay
 	printf "\b\b\b\b\b\b\b\b";
 done
 done
 printf "   \b\b\b\b\b"
-cnorm
+tput cnorm
 printf "\e[1;95m [\e[1;92m Running \e[1;95m]\e[0m";
 echo "";
 }
@@ -960,14 +965,14 @@ while [ "$(ps a | awk '{print $1}' | grep $pid)" ]; do
 
 for i in "${spinner[@]}"
 do
-	
+	tput civis
 	echo -ne "\033[1;91m\r[\e[1;92m-\e[1;91m]\e[1;95m Start LocalHost...   \e[97m http://127.0.0.1:4444 \e[1;93m[\033[1;92m$i\033[1;93m]\033[0m   ";
 	sleep $delay
 	printf "\b\b\b\b\b\b\b\b";
 done
 done
 printf "   \b\b\b\b\b"
-cnorm
+tput cnorm
 printf "\e[1;96m [\e[1;92m Done \e[1;96m]\e[0m";
 echo "";
 }
@@ -982,14 +987,14 @@ while [ "$(ps a | awk '{print $1}' | grep $pid)" ]; do
 
 for i in "${spinner[@]}"
 do
-	
+	tput civis
 	echo -ne "\033[1;91m\r[\e[1;95m-\e[1;91m]\e[1;92m Launching Link Service ... \e[1;93m[\033[1;92m$i\033[1;93m]\033[0m   ";
 	sleep $delay
 	printf "\b\b\b\b\b\b\b\b";
 done
 done
 printf "   \b\b\b\b\b"
-cnorm
+tput cnorm
 printf "\e[1;92m [ Done ]\e[0m";
 echo "";
 }
