@@ -783,7 +783,7 @@ links_lhrlife() {
                            echo -e "\e[96m=======================\e[92m   SUMAN © 2022 FF  \e[96m=======================\e[92m"
                            echo -e " "
 			   echo -e " "
-			   echo -e " \e[91m[\e[92m*\e[91m]\e[1;93m \e[0m\e[1;95m This Link Online Only 30 Minutes (\e[94mOnly Free User\e[1;95m) "
+			   echo -e " \e[91m[\e[92m*\e[91m]\e[1;93m \e[0m\e[1;95m Notice :\e[94m You Open this link and click chack button\e[1;95m) "
 			   echo -e " "
 			   echo -e " "
                            echo -e $'\e[1;33m\e[0m\e[1;77m\e[0m\e[1;33m\e[0m\e[1;96m ------------------------- > > > > > > >\e[0m'
