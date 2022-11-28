@@ -1,5 +1,5 @@
 
-# Using Tutorial : https://termux.xyz/hack-install-free-fire-phish%d1%96ng-tool-with-termux/
+# Using Tutorial : https://termux.xyz/hack-install-free-fire-phishing-tool-with-termux/
 
   <p>&nbsp;</p><p><br /></p><p><br /></p><p><br /></p>
   <p>&nbsp;</p><p><br /></p><p><br /></p>
