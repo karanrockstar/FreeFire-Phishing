@@ -1,5 +1,6 @@
 #!/bin/bash
 #clolors
+
 logo1() {
 #clolors
 white='\e[1;37m'
