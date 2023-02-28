@@ -25,7 +25,6 @@ echo""
 cd /data/data/com.termux/files/usr/bin
 bash FreeFire-Phishing
 
-
 fi
 if [[ $option == *'2'* ]]; then
 echo""
